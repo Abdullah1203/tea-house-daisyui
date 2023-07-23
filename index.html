@@ -17,6 +17,10 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/d8ee746695.js"
+      crossorigin="anonymous"
+    ></script>
     <script>
       tailwind.config = {
         theme: {
@@ -38,22 +42,23 @@
     </style>
   </head>
   <body>
-    <header>
-      <section>
+    <header class="container mx-auto">
+      <section class="">
         <!-- Banner section -->
-        <div class="mx-auto min-h-screen lg:min-h-full">
-          <div class="flex flex-col lg:flex-row my-20 gap-20 m-10 lg:m-40">
-            <div class="lg:px-20 space-y-7">
+        <div class="">
+          <div class="flex flex-col lg:flex-row my-20 justify-between gap-20">
+            <div class="space-y-7 flex-1">
               <h1 class="text-5xl lg:text-7xl font-extrabold">
                 It's good <br />
                 tea time at The Tea House
               </h1>
-              <p class="py-6 text-light-orange">
+              <p class="py-6 text-light-orange lg:max-w-lg">
                 Tea and Botanical Solutions Supplier Give Optimum Satisfaction
                 To Your Taste Buds.
               </p>
               <button
-                class="btn text-white bg-gradient-to-r from-light_orange to-dark_orange"
+                id="button"
+                class="btn text-white bg-gradient-to-r from-light_orange to-dark_orange text-center"
               >
                 Explore More
                 <svg
@@ -72,29 +77,266 @@
                 </svg>
               </button>
             </div>
-            <div class="flex-1">
+            <div class="">
               <div class="indicator">
                 <div
-                  class="indicator-item indicator-bottom indicator-start badge p-6 py-14 flex mb-16 ml-56 drop-shadow-md border-0 rounded-xl"
+                  class="indicator-item indicator-bottom indicator-start badge md:p-6 py-8 md:py-14 flex mb-8 ml-24 md:mb-16 md:ml-56 drop-shadow-md border-0 rounded-xl"
                 >
                   <div>
-                    <p class="text-5xl pr-3">🌟</p>
+                    <p class="md:text-5xl pr-3">🌟</p>
                   </div>
                   <div>
-                    <h2 class="text-3xl font-extrabold">5.00</h2>
-                    <p class="text-base font-bold text-light_ash">
+                    <h2 class="md:text-3xl font-extrabold">5.00</h2>
+                    <p class="md:text-base font-bold text-light_ash">
                       Trust Pilot Ratings
                     </p>
                   </div>
                 </div>
-                <img src="images/banner.png" />
+                <img class="w-80 md:min-w-max" src="images/banner.png" />
               </div>
             </div>
           </div>
         </div>
       </section>
     </header>
-    <main></main>
-    <footer></footer>
+
+    <main class="container mx-auto">
+      <!-- Featured products -->
+      <section class="text-center lg:my-56">
+        <h2 class="font-extrabold text-3xl lg:text-5xl mb-10">
+          Our Featured Products
+        </h2>
+        <p class="text-base text-light_ash lg:max-w-4xl lg:mx-auto">
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration in some form, by injected
+          humour, or randomized words which don't look even slightly believable.
+        </p>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 w-96 lg:w-auto m-auto my-20"
+        >
+          <div class="card bg-[#F4F4F4]">
+            <figure class="px-10 pt-10">
+              <img src="images/tea-1.png" alt="teas" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title font-extrabold">Milk Tea</h2>
+              <p>
+                Creamer could be replaced <br />
+                by fresh milk
+              </p>
+            </div>
+          </div>
+          <div class="card bg-[#F4F4F4]">
+            <figure class="px-10 pt-10">
+              <img src="images/tea-2.png" alt="teas" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title font-extrabold">Black Tea</h2>
+              <p>Creamer could be replaced <br />by fresh milk</p>
+            </div>
+          </div>
+          <div class="card bg-base-100 shadow-xl bg-[#F4F4F4]">
+            <figure class="px-10 pt-10">
+              <img src="images/tea-3.png" alt="teas" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title font-extrabold">Lemon Tea</h2>
+              <p>Creamer could be replaced <br />by fresh milk</p>
+            </div>
+          </div>
+          <div class="card bg-base-100 shadow-xl bg-[#F4F4F4]">
+            <figure class="px-10 pt-10">
+              <img src="images/tea-4.png" alt="teas" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title font-extrabold">Green Tea</h2>
+              <p>Creamer could be replaced <br />by fresh milk</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Great tea section -->
+      <section class="container my-20">
+        <div class="flex flex-col lg:flex-row justify-center gap-14">
+          <div class="grid grid-cols-2 lg:grid-col-2 gap-8 mx-6">
+            <div
+              class="bg-gradient-to-r from-[#F00f001a] to-[#FF89001A] h-12 lg:h-32 rounded-lg"
+            ></div>
+            <div class="row-span-2 bg-[#E6A6231A] rounded-lg">
+              <img class="lg:p-10 mx-auto" src="images/fresh-1.png" alt="" />
+            </div>
+            <div class="row-span-2 bg-[#5776391A] rounded-lg">
+              <img class="lg:p-10 mx-auto" src="images/fresh-2.png" alt="" />
+            </div>
+            <div
+              class="bg-gradient-to-r from-[#D9D9D9] to-[#FFFFFF00] h-12 lg:h-32 rounded-lg"
+            ></div>
+          </div>
+          <div class="flex-1 space-y-6 mx-6">
+            <h2 class="text-2xl lg:text-5xl font-extrabold">
+              Great Tea, Freshly <br />Presented
+            </h2>
+            <p class="text-base text-light_ash lg:max-w-2xl">
+              The meaning of gong cha is chanese is to provide the best tea to
+              emperor from all possessions . It represents the highest quality
+              and self expectation. Establishing in 2006, Gong cha had been
+              deeply appreciated by its custoers because of good words of mouth
+              and unique customized service orginated from Taiwan.
+            </p>
+            <h2 class="text-lg font-extrabold">Unique Taste</h2>
+            <p class="text-base text-light_ash lg:max-w-2xl">
+              A Unique and different style from other teapots gives a
+              <br />luxurious and minimalist impression
+            </p>
+            <h2 class="text-lg font-extrabold">Unique Taste</h2>
+            <p class="text-base text-light_ash lg:max-w-2xl">
+              Premium Quality that makes tea more elegant and more <br />durable
+              when you use it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- news and event section -->
+      <section class="text-center lg:my-56">
+        <h2 class="font-extrabold text-3xl lg:text-5xl mb-10">
+          Our Featured Products
+        </h2>
+        <p class="text-base text-light_ash lg:max-w-4xl lg:mx-auto">
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration in some form, by injected
+          humour, or randomized words which don't look even slightly believable.
+        </p>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-96 lg:w-max m-auto my-20"
+        >
+          <div class="card border text-left">
+            <figure class="px-6 pt-10">
+              <img src="images/news-1.png" alt="news" class="rounded-xl" />
+            </figure>
+            <div class="card-body space-y-3">
+              <p>Feb 05, 2027</p>
+              <h2 class="card-title font-extrabold">
+                Collecting 8 points for discount
+              </h2>
+              <p>
+                There are many variations of passages of <br />
+                Lorem Ipsum available.
+              </p>
+              <h2 class="card-title font-extrabold text-sm">Learn More</h2>
+            </div>
+          </div>
+          <div class="card border text-left">
+            <figure class="px-6 pt-10">
+              <img src="images/news-2.png" alt="news" class="rounded-xl" />
+            </figure>
+            <div class="card-body space-y-3">
+              <p>Feb 05, 2027</p>
+              <h2 class="card-title font-extrabold">
+                Collecting 8 points for discount
+              </h2>
+              <p>
+                There are many variations of passages of <br />
+                Lorem Ipsum available.
+              </p>
+              <h2 class="card-title font-extrabold text-sm">Learn More</h2>
+            </div>
+          </div>
+          <div class="card border text-left">
+            <figure class="px-6 pt-10">
+              <img src="images/news-3.png" alt="news" class="rounded-xl" />
+            </figure>
+            <div class="card-body space-y-3">
+              <p>Feb 05, 2027</p>
+              <h2 class="card-title font-extrabold">
+                Collecting 8 points for discount
+              </h2>
+              <p>
+                There are many variations of passages of <br />Lorem Ipsum
+                available.
+              </p>
+              <h2 class="card-title font-extrabold text-sm">Learn More</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="p-10 bg-[#ffe7e6] text-base-content">
+      <div class="flex flex-col justify-between lg:mx-44">
+        <div class="footer text-base-content lg:py-20 lg:gap-56">
+          <div>
+            <img src="images/cup.png" alt="" />
+          </div>
+          <div>
+            <span>Ready to get strated?</span>
+            <button
+              class="btn text-white bg-gradient-to-r from-light_orange to-dark_orange text-center"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+
+        <div class="part-2 footer text-base-content">
+          <div class="">
+            <span class="footer-title">Services</span>
+            <a class="link link-hover">Branding</a>
+            <a class="link link-hover">Design</a>
+            <a class="link link-hover">Marketing</a>
+            <a class="link link-hover">Advertisement</a>
+          </div>
+          <div>
+            <span class="footer-title">Company</span>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+          </div>
+          <div>
+            <span class="footer-title">Legal</span>
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+            <a class="link link-hover">Cookie policy</a>
+          </div>
+          <div>
+            <span class="footer-title">Newsletter</span>
+            <div class="form-control w-80">
+              <label class="label">
+                <span class="label-text">Enter your email address</span>
+              </label>
+              <div class="relative">
+                <input
+                  type="text"
+                  placeholder="username@site.com"
+                  class="input input-bordered w-full pr-16"
+                />
+                <button
+                  class="btn btn-primary absolute top-0 right-0 rounded-l-none"
+                >
+                  Subscribe
+                </button>
+                <div class="grid grid-cols-6 py-4">
+                  <a href="http://www.facebook.com" target="_blank"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                  <a href="www.twitter.com" target="_blank"
+                    ><i class="fa-brands fa-twitter"></i
+                  ></a>
+                  <a href=""
+                    ><i class="fa-brands fa-instagram fa-bounce"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part-3"></div>
+      </div>
+    </footer>
   </body>
 </html>
